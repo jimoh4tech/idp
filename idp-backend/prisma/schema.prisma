@@ -1,0 +1,42 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Person {
+  id Int @id @default(autoincrement())
+  fullname String 
+  gender String
+  address String
+  healthStatus String @default("Good")
+  isAlive Boolean @default(true)
+  isPregnant Boolean @default(false)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Donation {
+  id Int @id @default(autoincrement())
+  displayName String
+  amount Int
+  email String?
+  mobile String?
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
+
+model Expense {
+  id Int @id @default(autoincrement())
+  title String
+  amount Int
+  description String?
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+}
