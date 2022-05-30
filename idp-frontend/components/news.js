@@ -47,13 +47,17 @@ export default function NewsPost() {
 							Global
 						</Text>
 						<Heading color={'gray.700'} fontSize={'2xl'} fontFamily={'body'}>
-							Coronavirus wil decimate refugee 
+							Children and youth in internal displacement
 						</Heading>
 						<Text color={'gray.500'}>
-							As world leaders brace for the worst within their borders, they
-							must not abandon those living outside them. We must turbocharge
-							our humanity and stand in international solidarity with refugees
-							and displaced people during this time of widespread uncertainty.
+							19 May 2022, Geneva - The number of people living in internal
+							displacement around the world reached a record 59.1 million at the
+							end of 2021, up from 55 million a year earlier. The unprecedented
+							figure is the result of new waves of violence and protracted
+							conflict in countries ranging from Ethiopia and Afghanistan to
+							Syria and the Democratic Republic of the Congo (DRC), Nigeria.
+							according to the Internal Displacement Monitoring Centre (IDMC)'s
+							annual global report.
 						</Text>
 					</Stack>
 					<Stack direction={'column'} spacing={0} fontSize={'sm'}>
@@ -91,16 +95,19 @@ export default function NewsPost() {
 							fontSize={'sm'}
 							letterSpacing={1.1}
 						>
-							Afghanistan
+							IDP AND INSECURITY
 						</Text>
 						<Heading color={'gray.700'} fontSize={'2xl'} fontFamily={'body'}>
-							No place to call home for refugees
+							IDP camps in Maiduguri could endanger lives
 						</Heading>
 						<Text color={'gray.500'}>
-							Pakistani refugees in Afghanistan are facing a bleak future as
-							international organisations withdraw from Gulan camp, in the
-							south-east of the country. Funding for their assistance is now
-							being omitted for plans for 2020. In this photo story, camp
+							Amnesty International is deeply concerned about the safety of
+							thousands of Internally Displaced Persons (IDPs) in Borno state,
+							who are at risk of forced resettlement as the Borno state governor
+							moves to close all IDP camps within Maiduguri despite continued
+							attacks by Boko Haram and ISWAP and human rights violations by the
+							military. “The conflict that made us flee our homes out of fear,
+							is what the government is forcing us to go back and face.
 						</Text>
 					</Stack>
 					<Stack direction={'column'} spacing={0} fontSize={'sm'}>
@@ -189,7 +196,7 @@ export default function NewsPost() {
 							Nigeria
 						</Text>
 						<Heading color={'gray.700'} fontSize={'2xl'} fontFamily={'body'}>
-							Experiences of Community 
+							Experiences of Community
 						</Heading>
 						<Text color={'gray.500'}>
 							Community engagement usually necessitates time spent with

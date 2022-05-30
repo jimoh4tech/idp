@@ -26,7 +26,7 @@ export default function Footer() {
 					<Link href={'/'}>Home</Link>
 					<Link href={'/refugees'}>IDPs</Link>
 					<Link href={'/donations'}>Donations</Link>
-					<Link href={'/expenses'}>Expenses</Link>
+					<Link href={'/expenses'}>Accountability</Link>
 				</Stack>
 				<Text>© 2022 Aisha Bukar Abdulsalam. All rights reserved</Text>
 			</Container>

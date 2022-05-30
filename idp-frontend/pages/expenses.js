@@ -4,8 +4,14 @@ import Footer from '../components/footer';
 import NavBar from '../components/navbar';
 import ExpensesForm from '../components/expensesForm';
 import ExpensesList from '../components/expensesList';
+import { useEffect, useState } from 'react';
 
 export default function ExpensePage({ data }) {
+	const [admin, setAdmin] = useState(false);
+	useEffect(() => {
+		const status = localStorage.getItem('ADMIN_ACCESS');
+		setAdmin(() => (status === 'false' ? false : true));
+	});
 	if (!data) return <></>;
 	return (
 		<div>
@@ -19,7 +25,7 @@ export default function ExpensePage({ data }) {
 				<Box maxW='1000px' mx='auto' p={'3'}>
 					<NavBar />
 					<Divider orientation='vertical' height='50px' />
-					<ExpensesForm />
+					{admin && <ExpensesForm />}
 					<Divider orientation='vertical' height='100px' />
 					<ExpensesList data={data} />
 					<Divider orientation='vertical' height='50px' />

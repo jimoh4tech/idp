@@ -17,13 +17,13 @@ export default function Home() {
 
 			<main>
 				<Box maxW='1000px' mx='auto' p={'3'}>
-					<NavBar />
+					<NavBar  />
 					<Divider orientation='vertical' height='50px' />
 
 					<Box borderRadius='10' overflow='hidden'>
 						<Image
-							src='/images/refugee.jpg'
-							alt='Refugee Images'
+							src='/images/idp.jpg'
+							alt='IDP Images'
 							width={1024}
 							height={512}
 						/>

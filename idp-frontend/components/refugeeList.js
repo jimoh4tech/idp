@@ -13,7 +13,7 @@ export default function RefugeeList({ data }) {
 	return (
 		<TableContainer>
 			<Table variant='striped'>
-				<TableCaption>Details of Refugees in our Camp</TableCaption>
+				<TableCaption>Details of IDPs in our Camp</TableCaption>
 				<Thead>
 					<Tr>
 						<Th>Name</Th>

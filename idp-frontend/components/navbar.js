@@ -13,6 +13,7 @@ import {
 } from '@chakra-ui/react';
 import Image from 'next/image';
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
+import { useEffect, useState } from 'react';
 
 export default function NavBar() {
 	const { isOpen, onToggle } = useDisclosure();
@@ -64,6 +65,11 @@ export default function NavBar() {
 const DesktopNav = () => {
 	const linkColor = useColorModeValue('gray.600', 'gray.200');
 	const linkHoverColor = useColorModeValue('gray.800', 'white');
+	const [admin, setAdmin] = useState(false);
+	useEffect(() => {
+		const status = localStorage.getItem('ADMIN_ACCESS');
+		setAdmin(() => status === 'false' ? false : true);
+	})
 
 	return (
 		<Stack direction={'row'} spacing={4}>
@@ -88,6 +94,25 @@ const DesktopNav = () => {
 					</Popover>
 				</Box>
 			))}
+			<Box key={'login'}>
+				<Popover trigger={'hover'} placement={'bottom-start'}>
+					<PopoverTrigger>
+						<Link
+							p={2}
+							href={'/login'}
+							fontSize={'sm'}
+							fontWeight={500}
+							color={linkColor}
+							_hover={{
+								textDecoration: 'none',
+								color: linkHoverColor,
+							}}
+						>
+							{admin ? 'Admin': 'Login'}
+						</Link>
+					</PopoverTrigger>
+				</Popover>
+			</Box>
 		</Stack>
 	);
 };
@@ -142,7 +167,7 @@ const NAV_ITEMS = [
 		href: '/donations',
 	},
 	{
-		label: 'Expenses',
+		label: 'Accountability',
 		href: '/expenses',
 	},
 ];

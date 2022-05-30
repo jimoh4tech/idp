@@ -18,7 +18,6 @@ export default function DonationForm() {
 			amount: Number(event.target.amount.value),
 		};
 
-    console.log(data);
 		const JSONdata = JSON.stringify(data);
 
 		const endpoint = 'http://localhost:3333/api/v1/donations';
